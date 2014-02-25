@@ -20,5 +20,3 @@ function quicksort(arr){
 
   return quicksort(left).concat(pivot, quicksort(right));
 };
-
-
