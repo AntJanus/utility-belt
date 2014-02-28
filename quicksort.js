@@ -1,5 +1,12 @@
-function quicksort(arr){
+function quicksort(arr, customSort){
    //if array is empty
+
+  if(!customSort) {
+    customSort = function(a, b) {
+      return a < b;
+    };
+  }
+
   if (arr.length === 0) {
     return [];
   }
@@ -11,7 +18,7 @@ function quicksort(arr){
   //go through each element in array
   for (var i = 1; i < arr.length; i++) {
 
-    if (arr[i] < pivot) {
+    if (customSort(arr[i], pivot)) {
      left.push(arr[i]);
     } else {
       right.push(arr[i]);
