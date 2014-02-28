@@ -1,3 +1,14 @@
+//recursively
+function fibRec(i) {
+  if (i === 0) {
+    return 0;
+  } else if (i === 1) {
+    return 1;
+  } else {
+    return ( fibRec(i-1) + fibRec(i-2));
+  }
+}
+
 //programmatically
 function fibProg(i) {
   var a = 0;
