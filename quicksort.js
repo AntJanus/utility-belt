@@ -1,9 +1,9 @@
 function quicksort(arr, customSort){
-   //if array is empty
 
   if(!customSort) {
+    //if true, place value as "greater"
     customSort = function(a, b) {
-      return a < b;
+      return a > b;
     };
   }
 
@@ -19,9 +19,9 @@ function quicksort(arr, customSort){
   for (var i = 1; i < arr.length; i++) {
 
     if (customSort(arr[i], pivot)) {
-     left.push(arr[i]);
+     right.push(arr[i]);
     } else {
-      right.push(arr[i]);
+      left.push(arr[i]);
      }
   }
 
