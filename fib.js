@@ -1,9 +1,7 @@
 //recursively
 function fibRec(i) {
-  if (i === 0) {
-    return 0;
-  } else if (i === 1) {
-    return 1;
+  if (i < 2) {
+    return i;
   } else {
     return ( fibRec(i-1) + fibRec(i-2));
   }
