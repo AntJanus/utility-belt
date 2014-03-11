@@ -32,9 +32,8 @@ function fibMath(i) {
   var sqrtFive = Math.sqrt(5);
   var firstHalf = 0;
   var secondHalf = 0;
-  var index = parseInt(i, 10);
 
-  firstHalf = 1 / sqrtFive * Math.pow( ( ( 1 + sqrtFive ) / 2), index);
-  secondHalf = 1 / sqrtFive * Math.pow(  (1 + sqrtFive ) / 2 ), index);
-  return firstHalf - secondHalf;
+  firstHalf = 1 / sqrtFive * Math.pow( ( ( 1 + sqrtFive ) / 2), i);
+  secondHalf = 1 / sqrtFive * Math.pow( ( (1 - sqrtFive ) / 2 ), i);
+  return Math.round(firstHalf - secondHalf);
 }
